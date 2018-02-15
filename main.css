@@ -1,0 +1,153 @@
+html {
+  background: #F7D9FF;
+}
+
+header.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 70%;
+  margin-bottom: 2em;
+}
+
+.logo {
+  height: 140%;
+  width: 100%;
+  color: #E6B7FF;
+  display: flex;
+  justify-content: center;
+  /* padding: 1em 1em 3em 3em; */
+}
+
+#lineDrawing {
+  background: #F7D9FF;
+  height: 20vh;
+  width: 20vw;
+}
+
+.headlineContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.headlineRow {
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  font-family: 'Patrick Hand SC', cursive;
+  font-weight: bolder;
+  text-shadow: 20%;
+  font-size: 600%;
+  margin: .2em;
+}
+
+.biline {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.bilineRow {
+  display: flex;
+  justify-content: center;
+}
+
+.titles {
+  margin: 2em;
+  text-decoration: none;
+  color: #562482;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.mainContainerRow {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+
+.aboutMe {
+  margin: 2em 6em 0 6em;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.contactRow {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact {
+  margin: .4em;
+  text-decoration: none;
+  color: #956CB2;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 800;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    height: 40%;
+    width: 70%;
+    margin-bottom: 2em;
+  }
+  svg .logo {
+    height: 10%;
+  }
+}
+
+.resumeContainer {
+  display: flex;
+  justify-content: center;
+  margin: 6em;
+}
+
+.resumeRow {
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  width: 70%;
+  background-color: white;
+}
+
+.resume {
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(0 0 50px #333);
+}

@@ -1,0 +1,122 @@
+html {
+  background: #F1ECF5; }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+  background-color: #F1ECF5; }
+  header .logoContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+    margin-bottom: 2em; }
+    header .logoContainer .logo {
+      height: 140%;
+      width: 100%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      margin: 1em 0 8em 1em;
+      /* padding: 1em 1em 3em 3em; */ }
+      header .logoContainer .logo #lineDrawing {
+        background: #F1ECF5;
+        height: 20vh;
+        width: 20vw;
+        /* height: 130%;
+        width: 130%; */ }
+    header .logoContainer .headlineContainer {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center; }
+      header .logoContainer .headlineContainer .headlineRow {
+        display: flex;
+        justify-content: center; }
+        header .logoContainer .headlineContainer .headlineRow h1.name {
+          font-family: 'Patrick Hand SC';
+          font-weight: bolder;
+          text-shadow: 20%;
+          font-size: 600%;
+          margin: .2em; }
+      header .logoContainer .headlineContainer .biline {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-family: 'Source Code Pro', monospace; }
+        header .logoContainer .headlineContainer .biline .bilineRow {
+          display: flex;
+          justify-content: center; }
+          header .logoContainer .headlineContainer .biline .bilineRow .titles {
+            margin: 2em;
+            text-decoration: none;
+            color: #562482;
+            font-family: 'Source Code Pro', monospace; }
+
+main .mainContainer {
+  display: flex;
+  justify-content: center;
+  margin: 30px; }
+  main .mainContainer .mainContainerRow {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%; }
+    main .mainContainer .mainContainerRow .bio {
+      margin: 2em 2em 0 2em;
+      font-family: 'Source Code Pro', monospace;
+      /* text-align: center; */ }
+main .contactContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  font-family: 'Source Code Pro', monospace; }
+  main .contactContainer .contactRow {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; }
+    main .contactContainer .contactRow .contact {
+      margin: 0em 0 1em 0;
+      text-decoration: none;
+      color: #0E60BF; }
+    main .contactContainer .contactRow .subjectLn {
+      margin-bottom: 1.5em;
+      color: #949196; }
+main .resumeContainer {
+  display: flex;
+  justify-content: center;
+  margin: 6em; }
+  main .resumeContainer .resumeRow {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    width: 70%;
+    background-color: white; }
+    main .resumeContainer .resumeRow .resume {
+      height: 100%;
+      width: 100%;
+      filter: drop-shadow(0 0 50px #949196); }
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 800; }
+  to {
+    stroke-dashoffset: 0; } }
+@media (max-width: 500px) {
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    height: 40%;
+    width: 70%;
+    margin-bottom: 2em; }
+
+  svg .logo {
+    height: 10%; } }
+
+/*# sourceMappingURL=base.css.map */

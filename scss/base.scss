@@ -1,4 +1,8 @@
 $backgroundColor: #F1ECF5;
+$blue: #0E60BF;
+$white: #F1ECF5;
+$darkNeutral: #3E3D40;
+$backgroundColordarken: darken($backgroundColor, 40%);
 
 html {
   background: $backgroundColor;
@@ -11,7 +15,7 @@ header {
   flex-direction: column;
   height: 50%;
   width: 100%;
-  background-color: #F1ECF5;
+  background-color: $backgroundColor;
 
   .logoContainer {
     display: flex;
@@ -31,7 +35,7 @@ header {
       /* padding: 1em 1em 3em 3em; */
 
       #lineDrawing {
-        background: #F1ECF5;
+        background: $white;
         height: 20vh;
         width: 20vw;
         /* height: 130%;
@@ -50,7 +54,7 @@ header {
 
         h1.name {
           font-family: 'Patrick Hand SC';
-          font-weight: bolder;
+          font-weight: bold;
           text-shadow: 20%;
           font-size: 600%;
           margin: .2em;
@@ -67,10 +71,17 @@ header {
           justify-content: center;
 
           .titles {
-            margin: 2em;
+            margin: 1em;
             text-decoration: none;
-            color: #562482;
+            color: $darkNeutral;
             font-family: 'Source Code Pro', monospace;
+          }
+
+          a.titles.button.is-warning:hover{
+            background: $backgroundColor;
+            font-size: 114%;
+            font-weight: 600;
+            color: $backgroundColordarken;
           }
         }
       }
@@ -113,7 +124,7 @@ main {
       .contact {
         margin: 0em 0 1em 0;
         text-decoration: none;
-        color: #0E60BF;
+        color: $blue;
       }
 
       .subjectLn {

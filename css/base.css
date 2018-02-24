@@ -40,7 +40,7 @@ header {
         justify-content: center; }
         header .logoContainer .headlineContainer .headlineRow h1.name {
           font-family: 'Patrick Hand SC';
-          font-weight: bolder;
+          font-weight: bold;
           text-shadow: 20%;
           font-size: 600%;
           margin: .2em; }
@@ -53,10 +53,15 @@ header {
           display: flex;
           justify-content: center; }
           header .logoContainer .headlineContainer .biline .bilineRow .titles {
-            margin: 2em;
+            margin: 1em;
             text-decoration: none;
-            color: #562482;
+            color: #3E3D40;
             font-family: 'Source Code Pro', monospace; }
+          header .logoContainer .headlineContainer .biline .bilineRow a.titles.button.is-warning:hover {
+            background: #F1ECF5;
+            font-size: 114%;
+            font-weight: 600;
+            color: #8f66af; }
 
 main .mainContainer {
   display: flex;

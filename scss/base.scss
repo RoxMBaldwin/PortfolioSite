@@ -4,6 +4,8 @@ $white: #F1ECF5;
 $darkNeutral: #3E3D40;
 $backgroundColordarken: darken($backgroundColor, 40%);
 
+$mainMargin: 2em;
+
 html {
   background: $backgroundColor;
 }
@@ -47,10 +49,12 @@ header {
       justify-content: center;
       flex-direction: column;
       text-align: center;
+      width: 100%;
 
       .headlineRow {
         display: flex;
         justify-content: center;
+        width: 100%;
 
         h1.name {
           font-family: 'Patrick Hand SC';
@@ -58,6 +62,7 @@ header {
           text-shadow: 20%;
           font-size: 600%;
           margin: .2em;
+          width: 100%;
         }
       }
       .biline {
@@ -65,10 +70,13 @@ header {
         flex-direction: row;
         justify-content: center;
         font-family: 'Source Code Pro', monospace;
+        width: 100%;
 
         .bilineRow {
           display: flex;
           justify-content: center;
+          margin: $mainMargin 0 0 0;
+          width: 100%;
 
           .titles {
             margin: 1em;
@@ -92,17 +100,20 @@ header {
 main {
   .mainContainer {
     display: flex;
-    justify-content: center;
-    margin: 30px;
+    // justify-content: center;
+    align-items: center;
+    width: 100%;
 
     .mainContainerRow {
       display: flex;
-      justify-content: center;
+      // justify-content: center;
+      align-items: center;
       flex-direction: column;
-      width: 60%;
+      margin: 0 0 $mainMargin 0;
+      width: 100%;
 
       .bio {
-        margin: 2em 2em 0 2em;
+        margin: 2.5% 10% 0 10%;
         font-family: 'Source Code Pro', monospace;
         /* text-align: center; */
       }
@@ -137,7 +148,7 @@ main {
   .resumeContainer {
     display: flex;
     justify-content: center;
-    margin: 6em;
+    margin: 6em 6em $mainMargin 6em;
 
     .resumeRow {
       display: flex;
@@ -151,6 +162,17 @@ main {
         width: 100%;
         filter: drop-shadow(0 0 50px #949196);
       }
+    }
+  }
+
+  .downloadContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 $mainMargin 0;
+
+    .downloadButton {
+      display: flex;
+      justify-content: center;
     }
   }
 }

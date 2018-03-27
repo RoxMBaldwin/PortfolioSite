@@ -41,6 +41,7 @@ header {
         justify-content: center;
         width: 100%; }
         header .logoContainer .headlineContainer .headlineRow h1.name {
+          text-align: center;
           font-family: 'Patrick Hand SC';
           font-weight: bold;
           text-shadow: 20%;
@@ -120,7 +121,8 @@ main .downloadContainer {
   margin: 0 0 2em 0; }
   main .downloadContainer .downloadButton {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace; }
 
 @-webkit-keyframes dash {
   from {
@@ -137,5 +139,28 @@ main .downloadContainer {
 
   svg .logo {
     height: 10%; } }
+@media (max-width: 870px) {
+  header div.logoContainer {
+    display: flex;
+    justify-content: center; }
+    header div.logoContainer div.headlineContainer {
+      display: flex;
+      justify-content: center; }
+      header div.logoContainer div.headlineContainer div.headlineRow {
+        margin: 0;
+        display: flex;
+        justify-content: center; }
+        header div.logoContainer div.headlineContainer div.headlineRow h1.name {
+          font-size: 300%;
+          text-align: center; }
+      header div.logoContainer div.headlineContainer div.biline {
+        display: flex;
+        justify-content: center; }
+        header div.logoContainer div.headlineContainer div.biline div.bilineRow {
+          display: flex;
+          align-items: center;
+          flex-direction: column; }
+          header div.logoContainer div.headlineContainer div.biline div.bilineRow a.titles {
+            width: 70%; } }
 
 /*# sourceMappingURL=base.css.map */

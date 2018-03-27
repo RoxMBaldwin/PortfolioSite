@@ -103,12 +103,12 @@ main .contactContainer {
 main .resumeContainer {
   display: flex;
   justify-content: center;
-  margin: 6em 6em 2em 6em; }
+  margin: 5% 10% 2em 10%; }
   main .resumeContainer .resumeRow {
     display: flex;
     justify-content: center;
     height: 80%;
-    width: 70%;
+    width: 80%;
     background-color: white; }
     main .resumeContainer .resumeRow .resume {
       height: 100%;

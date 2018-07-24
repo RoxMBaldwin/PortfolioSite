@@ -3,7 +3,6 @@ html {
 
 header {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 50%;
@@ -13,23 +12,26 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
     width: 70%;
     margin-bottom: 2em; }
     header .logoContainer .logo {
-      height: 140%;
+      height: 100%;
       width: 100%;
       color: white;
       display: flex;
       justify-content: center;
-      margin: 1em 0 8em 1em;
+      margin: 1em 0 0 0;
       /* padding: 1em 1em 3em 3em; */ }
-      header .logoContainer .logo #lineDrawing {
+      header .logoContainer .logo div#lineDrawing {
+        display: flex;
+        justify-content: center;
         background: #F1ECF5;
         height: 20vh;
         width: 20vw;
         /* height: 130%;
         width: 130%; */ }
+        header .logoContainer .logo div#lineDrawing svg.image {
+          padding: 20px; }
     header .logoContainer .headlineContainer {
       display: flex;
       justify-content: center;
@@ -41,10 +43,12 @@ header {
         justify-content: center;
         width: 100%; }
         header .logoContainer .headlineContainer .headlineRow h1.name {
+          color: #d3c4e0;
           text-align: center;
-          font-family: 'Patrick Hand SC';
+          font-family: "Patrick Hand SC";
           font-weight: bold;
           text-shadow: 20%;
+          text-shadow: 0px 4px 4px #8F8699;
           font-size: 600%;
           margin: .2em;
           width: 100%; }
@@ -52,7 +56,7 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        font-family: 'Source Code Pro', monospace;
+        font-family: "Source Code Pro", monospace;
         width: 100%; }
         header .logoContainer .headlineContainer .biline .bilineRow {
           display: flex;
@@ -63,12 +67,19 @@ header {
             margin: 1em;
             text-decoration: none;
             color: #3E3D40;
-            font-family: 'Source Code Pro', monospace; }
+            font-family: "Source Code Pro", monospace;
+            font-weight: 200;
+            letter-spacing: 0.1em;
+            border: 2px solid #ffdd57;
+            border-radius: 18px;
+            padding: 20px; }
           header .logoContainer .headlineContainer .biline .bilineRow a.titles.button.is-warning:hover {
+            display: flex;
+            align-items: center;
             background: #F1ECF5;
             font-size: 114%;
             font-weight: 600;
-            color: #8f66af; }
+            color: #c0a9d2; }
 
 main .mainContainer {
   display: flex;
@@ -95,16 +106,68 @@ main .contactContainer {
     flex-direction: column;
     text-align: center; }
     main .contactContainer .contactRow .contact {
-      margin: 0em 0 1em 0;
+      margin: 1.5em 0em 1.5em 0;
       text-decoration: none;
+      letter-spacing: 0.1em;
       color: #0E60BF; }
+    main .contactContainer .contactRow form.postForm {
+      background-color: #d3c4e0;
+      border: 2px solid #d3c4e0;
+      border-radius: 18px; }
+      main .contactContainer .contactRow form.postForm div.formBody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1em 10em; }
+        main .contactContainer .contactRow form.postForm div.formBody p {
+          padding: 10px;
+          margin: 10px;
+          color: #F1ECF5;
+          font-weight: bold;
+          letter-spacing: 0.1em; }
+        main .contactContainer .contactRow form.postForm div.formBody textarea {
+          padding: 1em;
+          margin-bottom: 1.5em;
+          border: 2px solid transparent;
+          border-radius: 18px; }
+        main .contactContainer .contactRow form.postForm div.formBody input {
+          padding: .5em;
+          width: 80%;
+          border: 2px solid transparent;
+          border-radius: 18px; }
+      main .contactContainer .contactRow form.postForm .field.is-grouped {
+        display: flex;
+        justify-content: center;
+        margin: 1.5em 0; }
+        main .contactContainer .contactRow form.postForm .field.is-grouped div.control button.button {
+          background-color: #F1ECF5;
+          font-family: "Source Code Pro", monospace;
+          letter-spacing: 0.1em;
+          font-weight: 200;
+          margin: .5em 0; }
+          main .contactContainer .contactRow form.postForm .field.is-grouped div.control button.button span.icon {
+            margin-right: .15em; }
+        main .contactContainer .contactRow form.postForm .field.is-grouped div.control button.button:hover {
+          background-color: #0E60BF; }
     main .contactContainer .contactRow .subjectLn {
       margin-bottom: 1.5em;
       color: #949196; }
+main .downloadContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2em 0; }
+  main .downloadContainer .downloadButton {
+    display: flex;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace; }
+    main .downloadContainer .downloadButton a.contact.button.is-link.is-outlined {
+      border: 2px solid #3273dc;
+      border-radius: 18px;
+      padding: 20px; }
 main .resumeContainer {
   display: flex;
   justify-content: center;
-  margin: 5% 10% 2em 10%; }
+  margin: 5% 10%; }
   main .resumeContainer .resumeRow {
     display: flex;
     justify-content: center;
@@ -115,14 +178,6 @@ main .resumeContainer {
       height: 100%;
       width: 100%;
       filter: drop-shadow(0 0 50px #949196); }
-main .downloadContainer {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 2em 0; }
-  main .downloadContainer .downloadButton {
-    display: flex;
-    justify-content: center;
-    font-family: 'Source Code Pro', monospace; }
 
 @-webkit-keyframes dash {
   from {
@@ -136,9 +191,10 @@ main .downloadContainer {
     height: 40%;
     width: 70%;
     margin-bottom: 2em; }
-
-  svg .logo {
-    height: 10%; } }
+    .logoContainer div.logo {
+      margin: 0; }
+      .logoContainer div.logo div#lineDrawing svg.image {
+        padding: 0 14px 14px 14px; } }
 @media (max-width: 870px) {
   header div.logoContainer {
     display: flex;
@@ -151,15 +207,17 @@ main .downloadContainer {
         display: flex;
         justify-content: center; }
         header div.logoContainer div.headlineContainer div.headlineRow h1.name {
-          font-size: 300%;
-          text-align: center; }
+          font-size: 40px;
+          text-align: center;
+          margin: 30px 0; }
       header div.logoContainer div.headlineContainer div.biline {
         display: flex;
         justify-content: center; }
         header div.logoContainer div.headlineContainer div.biline div.bilineRow {
           display: flex;
           align-items: center;
-          flex-direction: column; }
+          flex-direction: column;
+          margin-top: 0; }
           header div.logoContainer div.headlineContainer div.biline div.bilineRow a.titles {
             width: 70%; } }
 

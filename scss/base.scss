@@ -2,9 +2,17 @@ $backgroundColor: #F1ECF5;
 $blue: #0E60BF;
 $white: #F1ECF5;
 $darkNeutral: #3E3D40;
-$backgroundColordarken: darken($backgroundColor, 40%);
+$backgroundColordarken: darken($backgroundColor, 12%);
+$backgroundColorDarkest: darken($backgroundColor, 20%);
 
 $mainMargin: 2em;
+
+$mainFont: 'Patrick Hand SC';
+$subFont: 'Source Code Pro', monospace;
+$letterSpacing: .1em;
+
+$button-border-radius: 18px;
+$buttonBorder: 2px solid;
 
 html {
   background: $backgroundColor;
@@ -12,7 +20,7 @@ html {
 
 header {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 50%;
@@ -23,26 +31,29 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
     width: 70%;
     margin-bottom: 2em;
 
     .logo {
-      height: 140%;
+      height: 100%;
       width: 100%;
       color: white;
       display: flex;
       justify-content: center;
-      margin: 1em 0 8em 1em;
+      margin: 1em 0 0 0;
       /* padding: 1em 1em 3em 3em; */
 
-      #lineDrawing {
-
+      div#lineDrawing {
+        display: flex;
+        justify-content: center;
         background: $white;
         height: 20vh;
         width: 20vw;
         /* height: 130%;
         width: 130%; */
+        svg.image {
+          padding: 20px;
+        }
       }
     }
     .headlineContainer {
@@ -58,10 +69,12 @@ header {
         width: 100%;
 
         h1.name {
+          color: $backgroundColordarken;
           text-align: center;
-          font-family: 'Patrick Hand SC';
+          font-family: $mainFont;
           font-weight: bold;
           text-shadow: 20%;
+          text-shadow: 0px 4px 4px #8F8699;
           font-size: 600%;
           margin: .2em;
           width: 100%;
@@ -71,27 +84,34 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        font-family: 'Source Code Pro', monospace;
+        font-family: $subFont;
         width: 100%;
 
         .bilineRow {
           display: flex;
           justify-content: center;
-          margin: $mainMargin 0 0 0;
+          margin: 2em 0 0 0;
           width: 100%;
 
           .titles {
             margin: 1em;
             text-decoration: none;
             color: $darkNeutral;
-            font-family: 'Source Code Pro', monospace;
+            font-family: $subFont;
+            font-weight: 200;
+            letter-spacing: $letterSpacing;
+            border: $buttonBorder #ffdd57;
+            border-radius: $button-border-radius;
+            padding: 20px;
           }
 
           a.titles.button.is-warning:hover{
+            display: flex;
+            align-items: center;
             background: $backgroundColor;
             font-size: 114%;
             font-weight: 600;
-            color: $backgroundColordarken;
+            color: $backgroundColorDarkest;
           }
         }
       }
@@ -135,9 +155,67 @@ main {
       text-align: center;
 
       .contact {
-        margin: 0em 0 1em 0;
+        margin: 1.5em 0em 1.5em 0;
         text-decoration: none;
+        letter-spacing: $letterSpacing;
         color: $blue;
+      }
+
+      form.postForm {
+        background-color: $backgroundColordarken;
+        border: $buttonBorder $backgroundColordarken;
+        border-radius: $button-border-radius;
+
+        div.formBody {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 1em 10em;
+
+          p {
+            padding: 10px;
+            margin: 10px;
+            color: $backgroundColor;
+            font-weight: bold;
+            letter-spacing: $letterSpacing;
+          }
+
+          textarea {
+            padding: 1em;
+            margin-bottom: 1.5em;
+            border: $buttonBorder transparent;
+            border-radius: $button-border-radius;
+          }
+
+          input {
+            padding: .5em;
+            width: 80%;
+            border: $buttonBorder transparent;
+            border-radius: $button-border-radius;
+          }
+
+
+        }
+        .field.is-grouped {
+          display: flex;
+          justify-content: center;
+          margin: 1.5em 0;
+          div.control {
+            button.button {
+              background-color: $backgroundColor;
+              font-family: $subFont;
+              letter-spacing: $letterSpacing;
+              font-weight: 200;
+              margin: .5em 0;
+              span.icon {
+                margin-right: .15em;
+              }
+            }
+            button.button:hover {
+              background-color: $blue;
+            }
+          }
+        }
       }
 
       .subjectLn {
@@ -146,11 +224,27 @@ main {
       }
     }
   }
+  .downloadContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 $mainMargin 0;
 
+    .downloadButton {
+      display: flex;
+      justify-content: center;
+      font-family: 'Source Code Pro', monospace;
+
+      a.contact.button.is-link.is-outlined {
+        border: $buttonBorder #3273dc;
+        border-radius: $button-border-radius;
+        padding: 20px;
+      }
+    }
+  }
   .resumeContainer {
     display: flex;
     justify-content: center;
-    margin: 5% 10% $mainMargin 10%;
+    margin: 5% 10%;
 
     .resumeRow {
       display: flex;
@@ -164,18 +258,6 @@ main {
         width: 100%;
         filter: drop-shadow(0 0 50px #949196);
       }
-    }
-  }
-
-  .downloadContainer {
-    display: flex;
-    justify-content: center;
-    margin: 0 0 $mainMargin 0;
-
-    .downloadButton {
-      display: flex;
-      justify-content: center;
-      font-family: 'Source Code Pro', monospace;
     }
   }
 }
@@ -197,30 +279,47 @@ main {
     height: 40%;
     width: 70%;
     margin-bottom: 2em;
-  }
-  svg .logo {
-    height: 10%;
+    div.logo{
+      margin: 0;
+      div#lineDrawing{
+        svg.image{
+          padding: 0 14px 14px 14px;
+        }
+      }
+    }
   }
 }
 
+
 @media (max-width: 870px) {
   header {
-    div.logoContainer{
+    div.logoContainer {
       display: flex;
       justify-content: center;
 
-      div.headlineContainer{
+      div.logo {
+
+        #lineDrawing{
+
+          svg.logo{
+
+          }
+        }
+      }
+
+      div.headlineContainer {
         display: flex;
         justify-content: center;
 
-        div.headlineRow{
+        div.headlineRow {
           margin: 0;
           display: flex;
           justify-content: center;
 
           h1.name {
-            font-size: 300%;
+            font-size: 40px;
             text-align: center;
+            margin: 30px 0;
           }
         }
 
@@ -231,6 +330,7 @@ main {
             display: flex;
             align-items: center;
             flex-direction: column;
+            margin-top: 0;
             a.titles {
               width: 70%;
             }

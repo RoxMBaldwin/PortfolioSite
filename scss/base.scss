@@ -154,11 +154,25 @@ main {
       flex-direction: column;
       text-align: center;
 
-      .contact {
-        margin: 1.5em 0em 1.5em 0;
-        text-decoration: none;
-        letter-spacing: $letterSpacing;
-        color: $blue;
+      .subjectLn {
+        margin-bottom: 1.5em;
+        font-weight: bold;
+        color: #949196;
+      }
+
+      div.bottomContact {
+          margin-top: 2em;
+        p.contact.subjectLn {
+          color: #949196;
+          // font-weight: bold;
+          margin: 0em;
+        }
+        .contact {
+          margin: 1.5em 0em 1.5em 0;
+          text-decoration: none;
+          letter-spacing: $letterSpacing;
+          color: $blue;
+        }
       }
 
       form.postForm {
@@ -216,11 +230,6 @@ main {
             }
           }
         }
-      }
-
-      .subjectLn {
-        margin-bottom: 1.5em;
-        color: #949196;
       }
     }
   }

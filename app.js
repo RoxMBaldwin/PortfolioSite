@@ -21,11 +21,11 @@ var lineDrawing = anime({
   loop: true
 });
 
-console.log('working');
+const consoleStyle = "color:#d3c4e0; font-size:36px; text-shadow: 0px 2px 1px #8F8699; font-family: 'Source Code Pro', monospace; $letterSpacing: 16px;"
 
+console.log("%chi. i'm roxy. let's build!" , consoleStyle);
 
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('innit')
   // Get all "navbar-burger" elements
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 

@@ -105,11 +105,20 @@ main .contactContainer {
     justify-content: center;
     flex-direction: column;
     text-align: center; }
-    main .contactContainer .contactRow .contact {
-      margin: 1.5em 0em 1.5em 0;
-      text-decoration: none;
-      letter-spacing: 0.1em;
-      color: #0E60BF; }
+    main .contactContainer .contactRow .subjectLn {
+      margin-bottom: 1.5em;
+      font-weight: bold;
+      color: #949196; }
+    main .contactContainer .contactRow div.bottomContact {
+      margin-top: 2em; }
+      main .contactContainer .contactRow div.bottomContact p.contact.subjectLn {
+        color: #949196;
+        margin: 0em; }
+      main .contactContainer .contactRow div.bottomContact .contact {
+        margin: 1.5em 0em 1.5em 0;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        color: #0E60BF; }
     main .contactContainer .contactRow form.postForm {
       background-color: #d3c4e0;
       border: 2px solid #d3c4e0;
@@ -149,9 +158,6 @@ main .contactContainer {
             margin-right: .15em; }
         main .contactContainer .contactRow form.postForm .field.is-grouped div.control button.button:hover {
           background-color: #0E60BF; }
-    main .contactContainer .contactRow .subjectLn {
-      margin-bottom: 1.5em;
-      color: #949196; }
 main .downloadContainer {
   display: flex;
   justify-content: center;
